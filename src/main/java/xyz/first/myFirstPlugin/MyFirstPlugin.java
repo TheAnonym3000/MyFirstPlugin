@@ -6,6 +6,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 import xyz.first.myFirstPlugin.cmd.PingCmd;
 import xyz.first.myFirstPlugin.listeners.onInteract;
 
+import java.util.Objects;
+
 public final class MyFirstPlugin extends JavaPlugin {
 
     public static void log(String text) {
@@ -34,7 +36,7 @@ public final class MyFirstPlugin extends JavaPlugin {
 
     private void register() {
         PluginManager pluginManager = Bukkit.getPluginManager();
-        Bukkit.getPluginCommand("ping").setExecutor(new PingCmd());
+        Objects.requireNonNull(Bukkit.getPluginCommand("ping")).setExecutor(new PingCmd());
         pluginManager.registerEvents(new onInteract(), this);
     }
 
