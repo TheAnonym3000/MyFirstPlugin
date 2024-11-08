@@ -38,4 +38,4 @@ public final class MyFirstPlugin extends JavaPlugin {
         pluginManager.registerEvents(new onInteract(), this);
     }
 
-}
+}//This is a comment
