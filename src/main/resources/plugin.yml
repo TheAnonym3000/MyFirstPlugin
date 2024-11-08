@@ -1,0 +1,7 @@
+name: MyFirstPlugin
+version: '0.1-SNAPSHOT'
+main: xyz.first.myFirstPlugin.MyFirstPlugin
+api-version: '1.21'
+commands:
+  ping:
+    description: Pings a player... Pong!!! #Really good idea
