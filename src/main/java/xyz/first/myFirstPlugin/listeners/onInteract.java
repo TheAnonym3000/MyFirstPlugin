@@ -19,15 +19,4 @@ public class onInteract implements Listener {
         chat("Here the data:");
         event.getPlayer().performCommand("data get" + event.getRightClicked().getUniqueId());
     }
-
-    @EventHandler
-    private void onEvent2(PlayerJoinEvent event) {
-        Player player = event.getPlayer();
-        if (player.getName().equals("TheAnonym3000")) {
-            event.setJoinMessage("§c§l§ke §r§c§l The Owner joined! RUN FOR YOUR LIFE! §ke");
-        } else {
-            player.kickPlayer(event.getPlayer().getName());
-            event.setJoinMessage("§a" + event.getPlayer().getName() + "§r wanted to join on the server!");
-        }
-    }
 }
