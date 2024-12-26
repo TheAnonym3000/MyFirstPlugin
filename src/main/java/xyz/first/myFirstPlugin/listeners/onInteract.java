@@ -1,12 +1,8 @@
 package xyz.first.myFirstPlugin.listeners;
 
-import org.bukkit.Bukkit;
-import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerInteractEntityEvent;
-import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.event.player.PlayerQuitEvent;
 
 import static xyz.first.myFirstPlugin.MyFirstPlugin.chat;
 
@@ -17,6 +13,6 @@ public class onInteract implements Listener {
         chat("This is the UUID of the right clicked entity:");
         chat(event.getRightClicked().getUniqueId().toString());
         chat("Here the data:");
-        event.getPlayer().performCommand("data get" + event.getRightClicked().getUniqueId());
+        chat(event.getPlayer().getMetadata(event.getRightClicked().toString()).toString());
     }
 }

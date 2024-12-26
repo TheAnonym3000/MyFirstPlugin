@@ -23,9 +23,9 @@ public final class MyFirstPlugin extends JavaPlugin {
     @Override
     public void onEnable() {
         // Plugin startup logic
+        log("[MyFirstPlugin] Starting MyFirstPlugin");
         register();
-
-        log("Started MyFirstPlugin");
+        log("[MyFirstPlugin] Started MyFirstPlugin");
     }
 
     @Override
